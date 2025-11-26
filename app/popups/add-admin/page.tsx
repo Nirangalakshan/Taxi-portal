@@ -47,7 +47,7 @@ function AddAdminModal({ isOpen, onClose }: AddAdminModalProps) {
     <div className="fixed inset-0 bg-opacity-20 backdrop-blur-sm border border-black flex items-center justify-center z-50 animate-fadeIn">
       <div className="bg-white rounded-2xl shadow-2xl w-full max-w-md mx-4 overflow-auto h-[90%] animate-scaleIn">
         {/* Header */}
-        <div className="bg-blue-400 px-6 py-4 flex items-center justify-between">
+        <div className="bg-blue-400 px-6 py-4 flex items-center justify-between sticky top-0 z-10">
           <div className="flex items-center gap-3">
             <div className="w-10 h-10 bg-white bg-opacity-20 rounded-full flex items-center justify-center">
               <FaShieldAlt className="text-white text-lg" />

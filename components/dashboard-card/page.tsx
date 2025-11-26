@@ -29,7 +29,7 @@ function Dashboardcard({
           </h3>
         </div>
         <div
-          className={`w-9 h-9 md:w-10 md:h-10 rounded-lg flex items-center justify-center shrink-0 ml-2 ${iconBgColor}`}
+          className={`w-15 h-15 md:w-10 md:h-10 rounded-lg flex items-center justify-center shrink-0 ml-2 ${iconBgColor}`}
         >
           {icon}
         </div>

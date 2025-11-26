@@ -51,10 +51,10 @@ function Dashboard() {
             title="Ongoing Rides"
             value="89"
             percentageChange={8}
-            iconBgColor="bg-cyan-50"
+            iconBgColor="bg-blue-50"
             icon={
               <svg
-                className="w-5 h-5 text-cyan-500"
+                className="w-5 h-5 text-blue-500"
                 fill="none"
                 stroke="currentColor"
                 viewBox="0 0 24 24"
@@ -72,10 +72,10 @@ function Dashboard() {
             title="Daily Revenue"
             value="LKR 12,847"
             percentageChange={13}
-            iconBgColor="bg-green-50"
+            iconBgColor="bg-blue-50"
             icon={
               <svg
-                className="w-5 h-5 text-green-500"
+                className="w-5 h-5 text-blue-500"
                 fill="none"
                 stroke="currentColor"
                 viewBox="0 0 24 24"
@@ -93,10 +93,10 @@ function Dashboard() {
             title="Completed Trips"
             value="1,234"
             percentageChange={7}
-            iconBgColor="bg-sky-50"
+            iconBgColor="bg-blue-50"
             icon={
               <svg
-                className="w-5 h-5 text-sky-500"
+                className="w-5 h-5 text-blue-500"
                 fill="none"
                 stroke="currentColor"
                 viewBox="0 0 24 24"
@@ -114,10 +114,10 @@ function Dashboard() {
             title="New Signups"
             value="42"
             percentageChange={23}
-            iconBgColor="bg-indigo-50"
+            iconBgColor="bg-blue-50"
             icon={
               <svg
-                className="w-5 h-5 text-indigo-500"
+                className="w-5 h-5 text-blue-500"
                 fill="none"
                 stroke="currentColor"
                 viewBox="0 0 24 24"
@@ -134,7 +134,7 @@ function Dashboard() {
         </div>
 
         {/* Charts Section */}
-        <div className="grid grid-cols-1 lg:grid-cols-2 gap-4 px-4 md:px-6 lg:px-8 pb-6 items-start">
+        <div className="grid grid-cols-1 lg:grid-cols-2 gap-4 px-4 md:px-6 lg:px-8 pb-4 md:pb-2 items-start">
           {/* Left Column */}
           <div className="flex flex-col gap-4 h-full">
             <RevenueTrendChart />

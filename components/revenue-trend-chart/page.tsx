@@ -15,6 +15,7 @@ import {
   ChartTooltip,
   ChartTooltipContent,
 } from "@/components/ui/chart";
+import { Button } from "../ui/button";
 
 // Last 7 days revenue data
 const chartData = [
@@ -37,9 +38,20 @@ const chartConfig = {
 function RevenueTrendChart() {
   return (
     <Card className="w-full">
-      <CardHeader>
-        <CardTitle>Revenue Trend</CardTitle>
-        <CardDescription>Last 7 days</CardDescription>
+      <CardHeader className="flex flex-row items-center justify-between space-y-0 pb-2">
+        <div>
+          <CardTitle>Revenue Trend</CardTitle>
+          <CardDescription>Last 7 days</CardDescription>
+        </div>
+        <div>
+          <Button
+            variant="outline"
+            size="sm"
+            className="bg-blue-500 text-white"
+          >
+            Last 7d
+          </Button>
+        </div>
       </CardHeader>
       <CardContent>
         <ChartContainer config={chartConfig} className="h-[300px] w-full">
