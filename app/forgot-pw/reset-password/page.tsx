@@ -99,27 +99,25 @@ const LoginForm = () => {
         <div className='w-full max-w-md'>
           {/* Header */}
           <div className='text-center mb-8'>
-            <h1 className='text-3xl font-bold text-gray-900 mb-2'>Welcome Back</h1>
-            <p className='text-gray-500 text-sm'>Sign in to your admin account</p>
+            <h1 className='text-3xl font-bold text-gray-900 mb-2'>Set New Password</h1>
+            <p className='text-gray-500 text-sm'>Must be at least 8 characters long</p>
           </div>
 
           <form className='space-y-5'>
             {/* Username Input */}
             <div className='space-y-2'>
               <label htmlFor='username' className='block text-xs font-medium text-gray-700'>
-                Username
+                Password
               </label>
               <div className='relative'>
                 <div className='absolute inset-y-0 left-0 pl-4 flex items-center pointer-events-none'>
-                  <svg className='w-5 h-5 text-gray-400' fill='none' stroke='currentColor' viewBox='0 0 24 24'>
-                    <path strokeLinecap='round' strokeLinejoin='round' strokeWidth='2' d='M16 7a4 4 0 11-8 0 4 4 0 018 0zM12 14a7 7 0 00-7 7h14a7 7 0 00-7-7z' />
-                  </svg>
+                
                 </div>
                 <input
-                  type='text'
-                  id='username'
-                  name='username'
-                  placeholder='Enter Username'
+                  type='password'
+                  id='password'
+                  name='password'
+                  placeholder='Enter New Password'
                   className='w-full pl-12 pr-4 py-3 bg-gray-50 border border-gray-200 rounded-xl focus:outline-none focus:ring-2 focus:ring-blue-500 focus:border-transparent transition-all duration-300 hover:bg-gray-100 text-gray-900 placeholder-gray-400 text-sm'
                   required
                 />
@@ -129,19 +127,17 @@ const LoginForm = () => {
             {/* Password Input */}
             <div className='space-y-2'>
               <label htmlFor='password' className='block text-xs font-medium text-gray-700'>
-                Password
+                Confirm Password
               </label>
               <div className='relative'>
                 <div className='absolute inset-y-0 left-0 pl-4 flex items-center pointer-events-none'>
-                  <svg className='w-5 h-5 text-gray-400' fill='none' stroke='currentColor' viewBox='0 0 24 24'>
-                    <path strokeLinecap='round' strokeLinejoin='round' strokeWidth='2' d='M12 15v2m-6 4h12a2 2 0 002-2v-6a2 2 0 00-2-2H6a2 2 0 00-2 2v6a2 2 0 002 2zm10-10V7a4 4 0 00-8 0v4h8z' />
-                  </svg>
+                  
                 </div>
                 <input
                   type={showPassword ? 'text' : 'password'}
                   id='password'
                   name='password'
-                  placeholder='Enter your password'
+                  placeholder='Re-enter your password'
                   className='w-full pl-12 pr-12 py-3 bg-gray-50 border border-gray-200 rounded-xl focus:outline-none focus:ring-2 focus:ring-blue-500 focus:border-transparent transition-all duration-300 hover:bg-gray-100 text-gray-900 placeholder-gray-400 text-sm'
                   required
                 />
@@ -164,45 +160,25 @@ const LoginForm = () => {
               </div>
             </div>
 
-            {/* Remember Me & Forgot Password */}
-            <div className='flex items-center justify-between pt-1'>
-              <div className='flex items-center'>
-                <input
-                  type='checkbox'
-                  id='remember'
-                  name='remember'
-                  className='w-4 h-4 text-blue-600 border-gray-300 rounded focus:ring-blue-500 cursor-pointer'
-                />
-                <label htmlFor='remember' className='ml-2 text-xs text-gray-700 cursor-pointer'>
-                  Remember me
-                </label>
-              </div>
-              <a href='/forgot-pw/forgot-password' className='text-xs text-blue-600 hover:text-blue-700 font-medium transition-colors duration-200'>
-                Forgot password?
-              </a>
-            </div>
-
             {/* Submit Button */}
             <button
               type='submit'
               className='w-full bg-blue-600 hover:bg-blue-700 text-white font-semibold py-3 px-4 rounded-xl transition-all duration-300 transform hover:scale-[1.01] active:scale-[0.99] shadow-md hover:shadow-lg flex items-center justify-center gap-2 mt-6'
-              onClick={() => router.push('/dashboard')}
+              onClick={() => router.push('/auth')}
             >
-              <svg className='w-5 h-5' fill='none' stroke='currentColor' viewBox='0 0 24 24'>
-                <path strokeLinecap='round' strokeLinejoin='round' strokeWidth='2' d='M11 16l-4-4m0 0l4-4m-4 4h14m-5 4v1a3 3 0 01-3 3H6a3 3 0 01-3-3V7a3 3 0 013-3h7a3 3 0 013 3v1' />
-              </svg>
-              Sign In
+              Reset Password
             </button>
 
             {/* Contact Support */}
-            <div className='text-center mt-6 pt-2'>
-              <p className='text-xs text-gray-600'>
-                Need help?{' '}
-                <a href='#' className='text-blue-600 hover:text-blue-700 font-semibold transition-colors duration-200'>
-                  Contact Support
-                </a>
-              </p>
-            </div>
+            <div className='text-center'>
+            <button
+              type='button'
+              onClick={() => router.push('/auth')}
+              className='text-sm text-gray-600 hover:text-blue-600 transition-colors duration-300'
+            >
+              ← Back to Login
+            </button>
+          </div>
           </form>
         </div>
       </div>
